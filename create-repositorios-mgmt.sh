@@ -20,10 +20,14 @@ mkdir -p platform platform/{apps,cluster-certificates,dns-operator,image-registr
 # -----------------------------------------------------------------------
 mkdir -p operators operators/{apps,cluster-logging,openshift-cluster-observability-operator}
 
+echo "# test-argocd" >> README.md  
+
 git init
 git add .
 git commit -m "Initial structure for testing"
-git remote add origin https://github.com/jguillemat/test-argocd.git
+git branch -M main
+
+git remote add origin git@github.com:jguillemat/test-argocd.git
 git push -u origin main
 
 #
