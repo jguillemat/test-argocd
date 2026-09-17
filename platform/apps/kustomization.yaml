@@ -4,4 +4,5 @@ metadata:
   name: apps-platform
 resources:
   - dns-operator.yaml
+  - image-registry.yaml
 
