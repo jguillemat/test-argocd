@@ -4,3 +4,6 @@ metadata:
   name: apps-operators
 resources:
   - lvms-operator.yaml
+  - cluster-logging-operator.yaml
+  - loki-operator.yaml
+  - openshift-cluster-observability-operator.yaml
