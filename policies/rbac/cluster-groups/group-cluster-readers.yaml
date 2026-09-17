@@ -3,10 +3,5 @@ kind: Group
 metadata:
   name: cluster-readers
 users:
-- ramon.soto
-- jorge.palma
-- rafael.borrego.ext
-- ana.sanchez.rivera
-- alvaror.rojas
-- tec.sti28.sandetel.ext
+- test-reader
 
