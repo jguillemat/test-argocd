@@ -6,4 +6,5 @@ metadata:
     argocd.argoproj.io/sync-wave: "60"  
 resources:
   - mc-99-worker-ssh.yaml
+  - mc-99-master-ssh.yaml
 

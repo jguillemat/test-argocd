@@ -1,0 +1,20 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  labels:
+    machineconfiguration.openshift.io/role: master
+  name: 99-master-ssh
+spec:
+  baseOSExtensionsContainerImage: ''
+  config:
+    ignition:
+      version: 3.2.0
+    passwd:
+      users:
+        - name: core
+          sshAuthorizedKeys:
+            - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDXSi+cc6RAUgNkaOEbPMZZL52N8mSJ6fDuY6fighFYVJjIHEwFXPA225z1GKrgv/qqK+q/FrAeQ6decaYZ+TjBwOyy8+UHlROmKhQvbB0ErpGfKNDSUgfxaqFtzlpmyAu5nI6bdWJwb3+q9lpuHA1OfU/GatNAwWD79D3jCG9k+NNcd3WkF8AtzB9A2ZFKDUt9xi2d3PIg4Sw7JeDVnH8U3uzGhahgxdRT9Wqo69OHXhea9MfRxnvVoD6nqdFy/KSltDS/AlaYheFa2jsu9qq9d052MtIbBjxBueesP69dSHU5YJsERiQhmr7qSxD6EbXVIsWRjrpQ3MdhInG9pVSotbwNZoufuiF7Ky/JEWkyeC/FsfJVEy0PpEb9sQ1hfh5WWBN31l3euYBKqi0jYwKuK3O+nZUMeJBhVmLw6DukyaPuuIdl8Exgx1P8mZmickOKiRsPKveMCatqXxTWgmUCkPyu7thpicSeVBbefNCvqmnKcL7l0aS4zCqaWGYakCs= carlos@carlosf34m6c.localdomain
+            - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAnSqdaBIA7mNhX8IHR771ldQI4pINSvupNYyuiDXnEP UCT-ocp-admins
+  fips: false
+  kernelType: ''
+  osImageURL: ''
