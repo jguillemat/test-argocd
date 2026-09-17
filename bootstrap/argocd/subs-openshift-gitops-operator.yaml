@@ -4,7 +4,7 @@ metadata:
   name: openshift-gitops-operator
   namespace: openshift-operators
   annotations:
-    argocd.argoproj.io/sync-wave: "3"    
+    argocd.argoproj.io/sync-wave: "30"    
 spec:
   channel: latest
   name: openshift-gitops-operator

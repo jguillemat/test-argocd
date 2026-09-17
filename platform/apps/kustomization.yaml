@@ -5,4 +5,5 @@ metadata:
 resources:
   - dns-operator.yaml
   - image-registry.yaml
+  - machineconfig.yaml
 

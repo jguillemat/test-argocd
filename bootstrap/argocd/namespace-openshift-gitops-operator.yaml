@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: openshift-gitops-operator
   annotations:
-    argocd.argoproj.io/sync-wave: "1"    
+    argocd.argoproj.io/sync-wave: "10"    
     security.openshift.io/MinimallySufficientPodSecurityStandard: restricted
   labels:
     kubernetes.io/metadata.name: openshift-gitops-operator

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dns-operator
+  name: machineconfig
   namespace: openshift-gitops  
   annotations:
     argocd.argoproj.io/sync-wave: "60"    
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main    
-    path: platform/dns-operator
+    path: platform/machineconfig
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
