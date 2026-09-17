@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: machineconfig
+  name: platform-machineconfig
   namespace: openshift-gitops  
   annotations:
     argocd.argoproj.io/sync-wave: "60"    
@@ -17,3 +17,10 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - ServerSideApply=true      
+  ignoreDifferences:
+    - group: "*"
+      kind: "*"
+      jsonPointers:
+        - /metadata/annotations/kubectl.kubernetes.io/last-applied-configuration         
