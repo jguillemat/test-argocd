@@ -1,0 +1,16 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: openshift-storage
+  labels:
+    kubernetes.io/metadata.name: openshift-storage
+    security.openshift.io/scc.podSecurityLabelSync: 'true'
+    pod-security.kubernetes.io/warn: privileged
+    openshift.io/cluster-monitoring: 'true'
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/warn-version: latest
+    pod-security.kubernetes.io/audit-version: latest
+spec:
+  finalizers:
+    - kubernetes
+

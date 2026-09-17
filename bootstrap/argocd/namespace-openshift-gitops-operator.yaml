@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: openshift-gitops-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"    
+    security.openshift.io/MinimallySufficientPodSecurityStandard: restricted
+  labels:
+    kubernetes.io/metadata.name: openshift-gitops-operator
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: latest
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: latest
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+spec:
+  finalizers:
+  - kubernetes
+
