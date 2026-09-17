@@ -3,4 +3,4 @@ kind: Kustomization
 metadata:
   name: apps-operators
 resources:
-
+  - lvms-operator.yaml
