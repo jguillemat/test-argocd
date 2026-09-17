@@ -1,0 +1,18 @@
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: cluster-admins
+users:
+- ada-admin
+- sandetel-admin
+- solutia-admin
+- gc-admin
+- juanmanuel.g.guillemat.ext
+- carlos.yus.ext
+- calberto.rodriguez.ext
+- julio.garzon.ext
+- rangel.villa.ext
+- angel.fernandez.villar.ext
+- miguel.gomez.medina.ext
+- luis.domarco.ext
+

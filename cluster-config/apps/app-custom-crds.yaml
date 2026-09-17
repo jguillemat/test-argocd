@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: custom-crds
+  name: cluster-custom-resources
   namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "-50"  
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main
-    path: custom-crds/apps
+    path: cluster-custom-resources/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops

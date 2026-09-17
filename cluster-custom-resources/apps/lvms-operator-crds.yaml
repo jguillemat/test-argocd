@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main    
-    path: custom-crds/lvms-operator
+    path: cluster-custom-resources/lvms-operator
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
