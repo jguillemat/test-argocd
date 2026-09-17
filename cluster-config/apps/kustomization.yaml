@@ -5,4 +5,5 @@ metadata:
 resources:
   - app-platform.yaml
   - app-operators.yaml
+  - app-custom-crds.yaml
 
