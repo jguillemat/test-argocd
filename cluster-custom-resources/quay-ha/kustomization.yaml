@@ -9,7 +9,7 @@ secretGenerator:
   files:
   - config.yaml
   - clair-config.yaml
-  - ./selfsigner-cert/ssl.cert
-  - ./selfsigner-cert/ssl.key
-  - ./selfsigner-cert/rootCA.pem
+  - selfsigner-cert/ssl.cert
+  - selfsigner-cert/ssl.key
+  - selfsigner-cert/rootCA.pem
 
