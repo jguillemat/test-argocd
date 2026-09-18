@@ -4,6 +4,8 @@ kind: Namespace
 metadata:
   name: openshift-gitops
   annotations:
+    # Wave 10 Namespaces 
+    # Namespace necesarios. 
     argocd.argoproj.io/sync-wave: "10"    
     security.openshift.io/MinimallySufficientPodSecurityStandard: privileged
   labels:

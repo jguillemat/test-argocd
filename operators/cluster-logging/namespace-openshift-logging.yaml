@@ -4,6 +4,9 @@ kind: Namespace
 metadata:
   name: openshift-logging
   annotations:
+    # Wave 10 Namespaces 
+    # Namespace necesarios. 
+    argocd.argoproj.io/sync-wave: "10"    
     openshift.io/node-selector: ""
   labels:
     openshift.io/cluster-monitoring: "true"

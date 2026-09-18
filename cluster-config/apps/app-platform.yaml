@@ -4,7 +4,9 @@ metadata:
   name: platform
   namespace: openshift-gitops
   annotations:
-    argocd.argoproj.io/sync-wave: "-50"  
+    # Wave 60 Configuración Cluster ( /platform ) 
+    # Configuración propia del cluster OpenShift. 
+    argocd.argoproj.io/sync-wave: "60"  
 spec:
   project: default
   source:

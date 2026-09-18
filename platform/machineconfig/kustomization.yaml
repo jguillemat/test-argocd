@@ -3,6 +3,7 @@ kind: Kustomization
 metadata:
   name: machineconfig
   annotations:
+    # Wave 60 Configuración Cluster ( /platform ) 
     argocd.argoproj.io/sync-wave: "60"  
 resources:
   - mc-99-worker-ssh.yaml

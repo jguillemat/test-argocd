@@ -4,6 +4,7 @@ kind: DNS
 metadata:
   name: default
   annotations:
+    # Wave 60 Configuración Cluster ( /platform ) 
     argocd.argoproj.io/sync-wave: "60"  
 spec:
   nodePlacement:

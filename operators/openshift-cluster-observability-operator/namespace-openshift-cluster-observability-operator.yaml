@@ -4,6 +4,8 @@ kind: Namespace
 metadata:
   name: openshift-cluster-observability-operator
   annotations:
+    # Wave 10 Namespaces 
+    # Namespace necesarios. 
     openshift.io/node-selector: ""
   labels:
     openshift.io/cluster-monitoring: "true" 

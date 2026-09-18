@@ -3,7 +3,9 @@ kind: Config
 metadata:
   name: cluster
   annotations:
-    argocd.argoproj.io/sync-wave: "2"    
+  annotations:
+    # Wave 60 Configuración Cluster ( /platform ) 
+    argocd.argoproj.io/sync-wave: "60"    
 spec:
   affinity:
     podAntiAffinity:
