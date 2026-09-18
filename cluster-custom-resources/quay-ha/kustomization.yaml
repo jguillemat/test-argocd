@@ -29,9 +29,10 @@ secretGenerator:
          
 - name:  quay-ha-route-tls
   namespace: quay-ha
+  type: kubernetes.io/tls
   files:
-  - certificate=ssl.cert
-  - key=ssl.key
+  - tls.cert=ssl.cert
+  - tls.key=ssl.key
   - destinationCACertificate=extra_ca_cert_quayha-ca.crt
   options:
     disableNameSuffixHash: true  
