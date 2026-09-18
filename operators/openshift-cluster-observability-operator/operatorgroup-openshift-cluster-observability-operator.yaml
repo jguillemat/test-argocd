@@ -5,5 +5,3 @@ metadata:
   namespace: openshift-cluster-observability-operator
 spec:
   upgradeStrategy: Default
-  namespaces:
-  - ""
