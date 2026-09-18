@@ -7,5 +7,5 @@ spec:
     section: OpenShift Plus
   location: ApplicationMenu
   text: Red Hat Quay HA
-  href: https://quay.apps.caas-noprod.ada.junta-andalucia.es
+  href: https://quay.apps.ws02-sno-ocp.uct.lab
 
