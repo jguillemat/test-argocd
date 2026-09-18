@@ -14,16 +14,9 @@ spec:
   port:
     targetPort: https
   tls:
-    certificate: |
-      -----BEGIN CERTIFICATE-----
-      -----END CERTIFICATE-----
-    destinationCACertificate: |
-      -----BEGIN CERTIFICATE-----
-      -----END CERTIFICATE-----
-    key: |
-      -----BEGIN EC PRIVATE KEY-----
-      -----END EC PRIVATE KEY-----
     termination: reencrypt
+    externalCertificate:
+      name: quay-ha-route-tls
   to:
     kind: Service
     name: quay-ha-quay-app
