@@ -27,18 +27,18 @@ secretGenerator:
       certificate-ssl-cert-expires: "2027-07-19"
       certificate-extra_ca_cert_quayha-ca-expires: "2029-05-18"   
          
-- name:  quay-ha-route-tls
-  namespace: quay-ha
-  type: kubernetes.io/tls
-  files:
-  - tls.crt=ssl.cert
-  - tls.key=ssl.key
-  - destinationCACertificate=extra_ca_cert_quayha-ca.crt
-  options:
-    disableNameSuffixHash: true  
-    labels:
-      generated-by: kustomize
-    annotations:
-      certificate-expires: "2027-07-19"
-      destinationCACertificate-expires: "2029-05-18"      
+#- name:  quay-ha-route-tls
+#  namespace: quay-ha
+#  type: kubernetes.io/tls
+#  files:
+#  - tls.crt=ssl.cert
+#  - tls.key=ssl.key
+#  - destinationCACertificate=extra_ca_cert_quayha-ca.crt
+#  options:
+#    disableNameSuffixHash: true  
+#    labels:
+#      generated-by: kustomize
+#    annotations:
+#      certificate-expires: "2027-07-19"
+#      destinationCACertificate-expires: "2029-05-18"      
 
