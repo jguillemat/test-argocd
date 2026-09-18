@@ -4,9 +4,10 @@ metadata:
   name: quay-ha-crds
 resources:
   - namespace-quay-ha.yaml
-  
+
 secretGenerator:
 - name: quay-config-quayha
+  namespace: quay-ha
   files:
   - config.yaml=config.yaml
   - clair-config.yaml=clair-config.yaml
