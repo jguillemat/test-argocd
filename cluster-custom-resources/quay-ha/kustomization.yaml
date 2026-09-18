@@ -4,7 +4,7 @@ metadata:
   name: quay-ha-crds
 resources:
   - namespace-quay-ha.yaml
-
+  - route-quay-ha-reencrypt-custom-certificate.yaml
 secretGenerator:
 - name: quay-config-quayha
   namespace: quay-ha
