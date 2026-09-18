@@ -6,5 +6,5 @@ metadata:
     argocd.argoproj.io/sync-wave: "60"  
 resources:
   - operatorgroup-loki-operator.yaml
-  - subs-loki-operator.yaml
+  - subscription-loki-operator.yaml
 

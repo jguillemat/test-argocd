@@ -7,4 +7,4 @@ metadata:
 resources:
   - namespace-openshift-cluster-observability-operator.yaml
   - operatorgroup-openshift-cluster-observability-operator.yaml
-  - subs-cluster-observability-operator.yaml
+  - subscription-cluster-observability-operator.yaml

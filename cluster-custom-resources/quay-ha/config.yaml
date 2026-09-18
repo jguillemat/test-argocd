@@ -1,0 +1,86 @@
+REGISTRY_TITLE: Quay HA Registry
+REGISTRY_TITLE_SHORT: Quay HA
+SERVER_HOSTNAME: quay.caas.ada.junta-andalucia.es
+PREFERRED_URL_SCHEME: https
+EXTERNAL_TLS_TERMINATION: false
+SESSION_COOKIE_SECURE: true
+SETUP_COMPLETE: true
+FEATURE_USER_INITIALIZE: true
+BROWSER_API_CALLS_XHR_ONLY: false
+FEATURE_QUOTA_MANAGEMENT: true
+FEATURE_BUILD_SUPPORT: false
+DEFAULT_SYSTEM_REJECT_QUOTA_BYTES: 102400000
+FEATURE_UI_V2: true
+FEATURE_UI_V2_REPO_SETTINGS: true
+ROBOTS_DISALLOW: false
+ALLOW_PULLS_WITHOUT_STRICT_LOGGING: false
+DEFAULT_TAG_EXPIRATION: 2w
+FEATURE_DIRECT_LOGIN: true
+FEATURE_MAILING: false
+TAG_EXPIRATION_OPTIONS:
+- 2w
+TEAM_RESYNC_STALE_TIME: 60m
+TESTING: false
+DISTRIBUTED_STORAGE_CONFIG:
+  default:
+    - RadosGWStorage
+    - access_key: ou00_gg_ada_quayges
+      secret_key: 'QPQrMBWuy5MoCww8+bz52PROU2vFBHbgie+u2gXD'
+      bucket_name: b00_r_ada_quayges
+      hostname: s00-r-ada.tic.junta-andalucia.es
+      is_secure: true
+      port: '443'
+      storage_path: /datastorage/registry
+      maximum_chunk_size_mb: 100
+      server_side_assembly: true
+DISTRIBUTED_STORAGE_DEFAULT_LOCATIONS: []
+DISTRIBUTED_STORAGE_PREFERENCE:
+  - default
+MAXIMUM_LAYER_SIZE: 20G
+DB_URI: postgresql://quayha:Mhj9833djf898rt@s00e-lbad-cpg02.chap.junta-andalucia.es:6504/quayha
+DB_CONNECTION_ARGS:
+  max_connections: 20
+  autorollback: true
+  threadlocals: true
+  sslmode: prefer
+#  
+# ZOCO Quay actual config
+# 
+DEBUGLOG: true
+FEATURE_GARBAGE_COLLECTION: true
+PERMANENTLY_DELETE_TAGS: true
+QUOTA_TOTAL_DELAY_SECONDS: 1800
+FEATURE_REPO_MIRROR: true
+FEATURE_PROXY_STORAGE: true
+FEATURE_PROXY_CACHE: true
+FEATURE_GENERAL_OCI_SUPPORT: true
+RESET_CHILD_MANIFEST_EXPIRATION: true
+FEATURE_USER_CREATION: true
+FEATURE_AUTO_PRUNE: true
+AUTOPRUNE:
+  DEFAULT_NAMESPACE_AUTOPRUNE_POLICY: by_number_of_tags
+  DEFAULT_NAMESPACE_AUTOPRUNE_KEEP_TAGS: 10
+  DEFAULT_NAMESPACE_AUTOPRUNE_METHOD: creation_date
+#  
+# LDAP Authentication
+# 
+AUTHENTICATION_TYPE: LDAP
+SUPER_USERS:
+  - jmanuel.garcia.ext
+  - carlos.yus.ext
+  - juanmanuel_g_guillemat_ext
+  - carlos_yus_ext
+LDAP_URI: ldaps://ldap.juntadeandalucia.es:636
+LDAP_ADMIN_DN: uid=caas.stemni.ada,o=ada,o=empleados,o=juntadeandalucia,c=es
+LDAP_ADMIN_PASSWD: NuevaC44S26-
+LDAP_ALLOW_INSECURE_FALLBACK: true
+LDAP_BASE_DN:
+- o=empleados
+- o=juntadeandalucia
+- c=es
+LDAP_EMAIL_ATTR: mail
+LDAP_UID_ATTR: uid
+LDAP_TIMEOUT: 10 
+LDAP_NETWORK_TIMEOUT: 10 
+FEATURE_LDAP_CACHING: false
+LDAP_CACHE_TTL: 10

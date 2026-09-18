@@ -4,4 +4,5 @@ metadata:
   name: apps-observability
 resources:
   - logging-config.yaml
+  - monitoring-config.yaml
 

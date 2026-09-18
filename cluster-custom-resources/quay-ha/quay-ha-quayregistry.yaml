@@ -1,0 +1,30 @@
+apiVersion: quay.redhat.com/v1
+kind: QuayRegistry
+metadata:
+  namespace: quay-ha
+  name: quay-ha
+spec:
+  configBundleSecret: quay-config-quayha
+  components:
+  - kind: quay
+    managed: true
+  - kind: postgres
+    managed: false
+  - kind: objectstorage
+    managed: false
+  - kind: redis
+    managed: true
+  - kind: clair
+    managed: true
+  - kind: clairpostgres
+    managed: true
+  - kind: horizontalpodautoscaler
+    managed: true
+  - kind: route
+    managed: false
+  - kind: tls
+    managed: false
+  - kind: mirror
+    managed: true
+  - kind: monitoring
+    managed: true

@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: quaylink
+spec:
+  applicationMenu:
+    section: OpenShift Plus
+  location: ApplicationMenu
+  text: Red Hat Quay HA
+  href: https://quay.apps.caas-noprod.ada.junta-andalucia.es
+

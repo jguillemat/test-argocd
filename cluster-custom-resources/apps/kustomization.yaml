@@ -4,3 +4,4 @@ metadata:
   name: apps-cluster-custom-resources
 resources:
   - lvms-operator-crds.yaml
+  - quay-ha-crds.yaml

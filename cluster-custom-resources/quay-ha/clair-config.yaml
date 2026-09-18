@@ -1,0 +1,40 @@
+updaters:
+  config:
+    rhel-vex:
+      ignore_unpatched: true
+    alpine:
+      ignore_unpatched: false
+    aws:
+      ignore_unpatched: false
+    debian:
+      ignore_unpatched: false
+    clair.cvss:
+      ignore_unpatched: false
+    oracle:
+      ignore_unpatched: false
+    photon:
+      ignore_unpatched: false
+    pyupio:
+      ignore_unpatched: false
+    rhel:
+      ignore_unpatched: false
+    rhcc:
+      ignore_unpatched: false
+    suse:
+      ignore_unpatched: false
+    ubuntu:
+      ignore_unpatched: false
+    osv:
+      ignore_unpatched: false      
+  sets:
+  - alpine
+  - aws
+  - clair.cvss
+  - debian
+  - oracle
+  - photon
+  - rhcc
+  - rhel-vex
+  - suse
+  - ubuntu
+
