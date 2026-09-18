@@ -2,11 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: quay-ha-crds
+resources:
   - namespace-quay-ha.yaml
-#  - route-quay-ha-reencrypt-custom-certificate.yaml
-#  - quay-ha-quayregistry.yaml
-#  - quay-ha-registry-console-link.yaml
-  
 secretGenerator:
 - name: quay-config-quayha
   files:
