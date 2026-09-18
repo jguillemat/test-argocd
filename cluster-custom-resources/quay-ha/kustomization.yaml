@@ -4,6 +4,8 @@ metadata:
   name: quay-ha-crds
 resources:
   - namespace-quay-ha.yaml
+  - role-secret-tls-reader.yaml
+  - rolebinding-secret-tls-reader.yaml
   - route-quay-ha-reencrypt-custom-certificate.yaml
 secretGenerator:
 - name: quay-config-quayha
