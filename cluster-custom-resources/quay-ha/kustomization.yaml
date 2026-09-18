@@ -6,7 +6,7 @@ resources:
   - namespace-quay-ha.yaml
   
 generatorOptions:
-  disableNameSuffixHash: true  # Applies to all generators
+  
   labels:
     generated-by: kustomize
   annotations:
@@ -21,4 +21,6 @@ secretGenerator:
   - ssl.cert
   - ssl.key
   - extra_ca_cert_quayha-ca.crt
+  options:
+    disableNameSuffixHash: true  # Only this generator
 
