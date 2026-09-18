@@ -4,12 +4,21 @@ metadata:
   name: quay-ha-crds
 resources:
   - namespace-quay-ha.yaml
+  
+  
+generatorOptions:
+  disableNameSuffixHash: true  # Applies to all generators
+  labels:
+    generated-by: kustomize
+  annotations:
+    config-version: "2026-09-18"
+      
 secretGenerator:
 - name: quay-config-quayha
   files:
   - config.yaml
   - clair-config.yaml
-  - selfsigner-cert/ssl.cert
-  - selfsigner-cert/ssl.key
-  - selfsigner-cert/rootCA.pem
+  - ssl.cert
+  - ssl.key
+  - rootCA.pem
 
