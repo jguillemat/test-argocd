@@ -2,12 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: quay-ha-crds
+  
 resources:
   - namespace-quay-ha.yaml
   - role-secret-tls-reader.yaml
   - rolebinding-secret-tls-reader.yaml
   - route-quay-ha-reencrypt-custom-certificate.yaml
+  
 secretGenerator:
+
 - name: quay-config-quayha
   namespace: quay-ha
   files:
@@ -37,5 +40,4 @@ secretGenerator:
     annotations:
       certificate-expires: "2027-07-19"
       destinationCACertificate-expires: "2029-05-18"      
-
 
