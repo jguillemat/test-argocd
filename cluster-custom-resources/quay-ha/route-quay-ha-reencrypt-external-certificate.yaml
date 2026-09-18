@@ -1,0 +1,24 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/timeout: 10m
+  labels:
+    app: quay
+    quay-component: quay
+    quay-operator/quayregistry: quay-ha
+  name: quay-ha-quay
+  namespace: quay-ha
+spec:
+  host: quay.apps.ws02-sno-ocp.uct.lab
+  port:
+    targetPort: https
+  tls:
+    termination: reencrypt
+    externalCertificate:
+      name: quay-ha-route-tls
+  to:
+    kind: Service
+    name: quay-ha-quay-app
+    weight: 100
+  wildcardPolicy: None
