@@ -5,22 +5,19 @@ metadata:
 resources:
   - namespace-quay-ha.yaml
   
-generatorOptions:
-  
-  labels:
-    generated-by: kustomize
-  annotations:
-    ssl-cert-expires: "2027-07-19"
-    extra_ca_cert_quayha-ca-expires: "2029-05-18"
-
 secretGenerator:
 - name: quay-config-quayha
   files:
-  - config.yaml
-  - clair-config.yaml
-  - ssl.cert
-  - ssl.key
-  - extra_ca_cert_quayha-ca.crt
+  - config.yaml=config.yaml
+  - clair-config.yaml=clair-config.yaml
+  - ssl.cert=ssl.cert
+  - ssl.key=ssl.key
+  - extra_ca_cert_quayha-ca.crt=extra_ca_cert_quayha-ca.crt
   options:
     disableNameSuffixHash: true  # Only this generator
+    labels:
+      generated-by: kustomize
+    annotations:
+      certificate-ssl-cert-expires: "2027-07-19"
+      certificate-extra_ca_cert_quayha-ca-expires: "2029-05-18"      
 
