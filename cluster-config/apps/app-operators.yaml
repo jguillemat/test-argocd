@@ -6,7 +6,7 @@ metadata:
   annotations:
     # Wave 20 Operadores Base ( /operators ) 
     # Operadores que proporcionan CRDs requeridos por otros componentes. 
-    argocd.argoproj.io/sync-wave: "30"    
+    argocd.argoproj.io/sync-wave: "20"    
 spec:
   project: default
   source:

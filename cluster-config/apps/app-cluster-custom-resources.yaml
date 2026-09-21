@@ -4,6 +4,7 @@ metadata:
   name: cluster-custom-resources
   namespace: openshift-gitops
   annotations:
+    # Wave 50 Configuración de Operadores ( /cluster-custom-resources ) 
     argocd.argoproj.io/sync-wave: "50"    
 spec:
   project: default

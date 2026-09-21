@@ -2,6 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: apps-platform
+  annotations:
+    # Wave 60 Configuración Cluster ( /platform ) 
+    # Configuración propia del cluster OpenShift. 
+    argocd.argoproj.io/sync-wave: "60"   
 resources:
   - proxy.yaml
   - dns-operator.yaml

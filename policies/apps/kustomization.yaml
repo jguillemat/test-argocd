@@ -3,7 +3,10 @@ kind: Kustomization
 metadata:
   name: apps-policies
   annotations:
-    argocd.argoproj.io/sync-wave: "15"    
+    # Wave 15 Configuración RBAC ( /policies ) 
+    # Configuración groups/roles/bindings.
+    argocd.argoproj.io/sync-wave: "15"  
 resources:
+  - rbac-cluster-roles.yaml
   - rbac-cluster-groups.yaml
   - rbac-cluster-rolebindings.yaml

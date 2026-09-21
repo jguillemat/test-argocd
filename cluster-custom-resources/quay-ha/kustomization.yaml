@@ -2,15 +2,16 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: quay-ha-crds
-  
+  annotations:
+    # Wave 50 Configuración de Operadores ( /cluster-custom-resources ) 
+    argocd.argoproj.io/sync-wave: "50"    
 resources:
   - namespace-quay-ha.yaml
   - role-secret-tls-reader.yaml
   - rolebinding-secret-tls-reader.yaml
   - route-quay-ha-reencrypt-custom-certificate.yaml
-  
-secretGenerator:
 
+secretGenerator:
 - name: quay-config-quayha
   namespace: quay-ha
   files:

@@ -2,6 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: lvms-operator
+  annotations:
+    # Wave 20 Operadores Base ( /operators ) 
+    # Wave 30 Operadores Infraestructura ( /operators ) 
+    argocd.argoproj.io/sync-wave: "20"    
 resources:
   - namespace-openshift-storagte.yaml
   - operatorgroup-openshift-storage.yaml

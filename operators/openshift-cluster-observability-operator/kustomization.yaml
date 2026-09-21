@@ -3,7 +3,9 @@ kind: Kustomization
 metadata:
   name: openshift-cluster-observability-operator
   annotations:
-    argocd.argoproj.io/sync-wave: "60"  
+    # Wave 20 Operadores Base ( /operators ) 
+    # Wave 30 Operadores Infraestructura ( /operators ) 
+    argocd.argoproj.io/sync-wave: "30"    
 resources:
   - namespace-openshift-cluster-observability-operator.yaml
   - operatorgroup-openshift-cluster-observability-operator.yaml
