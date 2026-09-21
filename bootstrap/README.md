@@ -130,13 +130,13 @@ oc get secrets -n openshift-gitops
 Aplicar únicamente la Root Application:
 
 ```bash
-oc apply -f root-application.yaml
+oc apply -f app-cluster-root.yaml
 ```
 
 o alternativamente:
 
 ```bash
-oc create -f root-application.yaml
+oc create -f app-cluster-root.yaml
 ```
 
 Una vez creada:
@@ -164,7 +164,7 @@ Ante una pérdida del clúster o una reinstalación de OpenShift basta con:
 3. Aplicar la Root Application.
 
 ```bash
-oc apply -f root-application.yaml
+oc apply -f app-cluster-root.yaml
 ```
 
 ArgoCD reconciliará automáticamente toda la configuración definida en Git.
