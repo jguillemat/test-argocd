@@ -150,7 +150,8 @@ spec:
       end
       hs.status = "Progressing"
       hs.message = "Waiting for Operator installation"
-      return hs              
+      return hs    
+         
   repo:
     resources:
       limits:
