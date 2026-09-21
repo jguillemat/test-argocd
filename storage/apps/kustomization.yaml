@@ -3,7 +3,7 @@ kind: Kustomization
 metadata:
   name: app-storage
   annotations:
-    # Wave 25 Configuración Storage ( /storage ) 
-    argocd.argoproj.io/sync-wave: "25"  
+    # Wave 60 Configuración Storage ( /storage ) 
+    argocd.argoproj.io/sync-wave: "60"  
 resources:
 

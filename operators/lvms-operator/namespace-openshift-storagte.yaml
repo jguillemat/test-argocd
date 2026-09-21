@@ -10,10 +10,6 @@ metadata:
     pod-security.kubernetes.io/audit: privileged
     pod-security.kubernetes.io/warn-version: latest
     pod-security.kubernetes.io/audit-version: latest
-  annotations:
-    # Wave 10 Namespaces 
-    # Namespace necesarios. 
-    argocd.argoproj.io/sync-wave: "10"      
 spec:
   finalizers:
     - kubernetes

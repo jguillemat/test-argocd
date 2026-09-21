@@ -3,9 +3,9 @@ kind: Kustomization
 metadata:
   name: loki-operator
   annotations:
-    # Wave 20 Operadores Base ( /operators ) 
-    # Operadores que proporcionan CRDs requeridos por otros componentes. 
-    argocd.argoproj.io/sync-wave: "30"    
+    # Wave 30 Operadores Base ( /operators ) 
+    # Wave 35 Operadores Infraestructura ( /operators )     
+    argocd.argoproj.io/sync-wave: "30"   
 resources:
   - operatorgroup-loki-operator.yaml
   - subs-loki-operator.yaml

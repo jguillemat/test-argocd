@@ -3,9 +3,9 @@ kind: Kustomization
 metadata:
   name: app-observability
   annotations:
-    # Wave 70 Observabilidad  ( /observability ) 
+    # Wave 80 Observabilidad  ( /observability ) 
     # Servicios de monitorización de la plataforma/aplicaciones 
-    argocd.argoproj.io/sync-wave: "70"      
+    argocd.argoproj.io/sync-wave: "80"  
 resources:
   - logging-config.yaml
   - monitoring-config.yaml

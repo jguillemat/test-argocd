@@ -3,8 +3,8 @@ kind: Kustomization
 metadata:
   name: app-cluster-custom-resources
   annotations:
-    # Wave 60 Configuración de Operadores ( /cluster-custom-resources ) 
-    argocd.argoproj.io/sync-wave: "60"    
+    # Wave 70 Configuración de CRDs ( /cluster-custom-resources ) 
+    argocd.argoproj.io/sync-wave: "70"    
 resources:
   - lvms-operator-crds.yaml
   - quay-ha-crds.yaml

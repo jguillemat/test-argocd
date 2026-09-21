@@ -3,8 +3,8 @@ kind: Kustomization
 metadata:
   name: quay-ha-crds
   annotations:
-    # Wave 60 Configuración de Operadores ( /cluster-custom-resources ) 
-    argocd.argoproj.io/sync-wave: "60"    
+    # Wave 70 Configuración de CRDs ( /cluster-custom-resources ) 
+    argocd.argoproj.io/sync-wave: "70"    
 resources:
   - namespace-quay-ha.yaml
   - role-secret-tls-reader.yaml

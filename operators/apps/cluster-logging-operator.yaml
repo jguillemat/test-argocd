@@ -4,6 +4,9 @@ metadata:
   name: cluster-logging-operator
   namespace: openshift-gitops  
   annotations:
+    # Wave 30 Operadores Base ( /operators ) 
+    # Operadores que proporcionan CRDs requeridos por otros componentes. 
+    # Wave 35 Operadores Infraestructura ( /operators )     
     argocd.argoproj.io/sync-wave: "30"
     argocd.argoproj.io/enable-health-check: "true"  
 spec:

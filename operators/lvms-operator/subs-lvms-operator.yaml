@@ -3,8 +3,6 @@ kind: Subscription
 metadata:
   name: lvms-operator
   namespace: openshift-storage
-  annotations:
-    argocd.argoproj.io/sync-wave: "30"    
   labels:
     operators.coreos.com/lvms-operator.openshift-storage: ''
 spec:

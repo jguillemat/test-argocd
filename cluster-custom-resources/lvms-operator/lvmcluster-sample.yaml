@@ -4,7 +4,8 @@ metadata:
   name: lvmcluster-sample
   namespace: openshift-storage
   annotations:
-    argocd.argoproj.io/sync-wave: "50"     
+    # Wave 70 Configuración de CRDs ( /cluster-custom-resources ) 
+    argocd.argoproj.io/sync-wave: "70"   
 spec:
   storage:
     deviceClasses:

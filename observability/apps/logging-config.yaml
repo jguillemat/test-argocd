@@ -4,7 +4,9 @@ metadata:
   name: logging-config
   namespace: openshift-gitops  
   annotations:
-    argocd.argoproj.io/sync-wave: "70"
+    # Wave 80 Observabilidad  ( /observability ) 
+    # Servicios de monitorización de la plataforma/aplicaciones 
+    argocd.argoproj.io/sync-wave: "80"  
     argocd.argoproj.io/enable-health-check: "true"    
 spec:
   project: default

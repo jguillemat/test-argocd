@@ -4,7 +4,9 @@ metadata:
   name: openshift-cluster-observability-operator
   namespace: openshift-gitops  
   annotations:
-    argocd.argoproj.io/sync-wave: "30"
+    # Wave 30 Operadores Base ( /operators ) 
+    # Wave 35 Operadores Infraestructura ( /operators )     
+    argocd.argoproj.io/sync-wave: "30" 
     argocd.argoproj.io/enable-health-check: "true"    
 spec:
   project: default

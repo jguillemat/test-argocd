@@ -378,6 +378,6 @@ Ejemplo:
 ```text
 subscription-loki.yaml
 operatorgroup-lvms.yaml
-quayregistry.yaml
+quayregistry-myquay.yaml
 ```
 

@@ -4,7 +4,8 @@ metadata:
   name: lvms-operator-crds
   namespace: openshift-gitops  
   annotations:
-    argocd.argoproj.io/sync-wave: "50"
+    # Wave 70 Configuración de CRDs ( /cluster-custom-resources ) 
+    argocd.argoproj.io/sync-wave: "70"  
     argocd.argoproj.io/enable-health-check: "true"   
 spec:
   project: default

@@ -3,9 +3,9 @@ kind: Kustomization
 metadata:
   name: cluster-logging-operator
   annotations:
-    # Wave 20 Operadores Base ( /operators ) 
-    # Operadores que proporcionan CRDs requeridos por otros componentes. 
-    argocd.argoproj.io/sync-wave: "30"    
+    # Wave 30 Operadores Base ( /operators ) 
+    # Wave 35 Operadores Infraestructura ( /operators )     
+    argocd.argoproj.io/sync-wave: "30" 
 resources:
   - namespace-openshift-operators-redhat.yaml
   - namespace-openshift-logging.yaml

@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: policies
+  name: app-cluster-config
   namespace: openshift-gitops
   annotations:
-    # Wave 10 Configuración RBAC ( /policies ) 
-    # Configuración groups/roles/bindings.
-    argocd.argoproj.io/sync-wave: "10"  
+    # Wave 10 Configuración cluster ( /cluster-config ) 
+    # Namespaces, AppProjects, Secrets GitOps, PullSecrets
+    argocd.argoproj.io/sync-wave: "10"    
     argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main
-    path: policies/apps
+    path: cluster-config/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops

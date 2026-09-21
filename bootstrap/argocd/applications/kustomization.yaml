@@ -3,12 +3,12 @@ kind: Kustomization
 metadata:
   name: app-cluster-config
 resources:
-  - 00-cluster-config.yaml
-  - 10-policies.yaml
-  - 20-operators.yaml
-  - 25-storage.yaml
+  - 10-cluster-config.yaml
+  - 20-policies.yaml
+  - 30-operators.yaml
   - 40-operators-health.yaml
   - 50-platform.yaml
-  - 60-cluster-custom-resources.yaml
-  - 70-observability.yaml
+  - 60-storage.yaml
+  - 70-cluster-custom-resources.yaml
+  - 80-observability.yaml
 

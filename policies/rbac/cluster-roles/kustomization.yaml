@@ -3,7 +3,7 @@ kind: Kustomization
 metadata:
   name: rbac-cluster-roles
   annotations:
-    # Wave 10 Configuración RBAC ( /policies ) 
+    # Wave 20 Configuración RBAC ( /policies ) 
     # Configuración groups/roles/bindings.
-    argocd.argoproj.io/sync-wave: "15"    
+    argocd.argoproj.io/sync-wave: "21"    
 resources:

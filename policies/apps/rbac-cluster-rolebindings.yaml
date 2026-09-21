@@ -4,7 +4,9 @@ metadata:
   name: rbac-cluster-rolebindings
   namespace: openshift-gitops  
   annotations:
-    argocd.argoproj.io/sync-wave: "12"
+    # Wave 20 Configuración RBAC ( /policies ) 
+    # Configuración groups/roles/bindings.
+    argocd.argoproj.io/sync-wave: "23"  
     argocd.argoproj.io/enable-health-check: "true"    
 spec:
   project: default

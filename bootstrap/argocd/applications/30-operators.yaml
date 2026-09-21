@@ -1,19 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-cluster-config
+  name: operators
   namespace: openshift-gitops
   annotations:
-    # Wave 0 Configuración cluster ( /cluster-config ) 
-    # Namespaces, AppProjects, Secrets GitOps, PullSecrets
-    argocd.argoproj.io/sync-wave: "0"    
+    # Wave 30 Operadores Base ( /operators ) 
+    # Operadores que proporcionan CRDs requeridos por otros componentes. 
+    # Wave 35 Operadores Infraestructura ( /operators )     
+    argocd.argoproj.io/sync-wave: "30"    
     argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main
-    path: cluster-config/apps
+    path: operators/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops

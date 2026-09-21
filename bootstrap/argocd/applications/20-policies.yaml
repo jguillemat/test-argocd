@@ -1,18 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: storage
+  name: policies
   namespace: openshift-gitops
-  annotations:  
-    # Wave 25 Configuración Storage ( /storage ) 
-    argocd.argoproj.io/sync-wave: "25" 
+  annotations:
+    # Wave 20 Configuración RBAC ( /policies ) 
+    # Configuración groups/roles/bindings.
+    argocd.argoproj.io/sync-wave: "20"  
     argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main
-    path: storage/apps
+    path: policies/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops
