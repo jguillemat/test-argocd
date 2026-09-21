@@ -3,4 +3,5 @@ kind: Kustomization
 metadata:
   name: apps-policies
 resources:
-  - rbac-groups.yaml
+  - rbac-cluster-groups.yaml
+  - rbac-cluster-rolebindings.yaml
