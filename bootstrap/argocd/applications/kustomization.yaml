@@ -2,6 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: app-cluster-config
+  annotations:
+    # Wave 0 Aplicación raíz (App of Apps)  ( /bootstrap ) 
+    argocd.argoproj.io/sync-wave: "0"  
 resources:
   - 10-cluster-config.yaml
   - 20-policies.yaml
