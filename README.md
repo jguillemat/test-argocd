@@ -370,7 +370,7 @@ lower-case
 Recursos:
 
 ```text
-<tipo>-<servicio>.yaml
+<tipo-recurso>-<nombre-recurso>.yaml
 ```
 
 Ejemplo:
