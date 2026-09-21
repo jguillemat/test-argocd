@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: cluster-root
   namespace: openshift-gitops
+  annotations:
+    # Wave 0 Aplicación raíz (App of Apps)  ( /bootstrap ) 
+    argocd.argoproj.io/sync-wave: "0"    
 spec:
   project: default
   source:
