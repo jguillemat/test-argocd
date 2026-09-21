@@ -21,11 +21,6 @@ data:
       - effect: NoSchedule
         key: node-role.kubernetes.io/infra
         operator: Exists
-    grafana:
-      tolerations:
-      - effect: NoSchedule
-        key: node-role.kubernetes.io/infra
-        operator: Exists
     k8sPrometheusAdapter:
       tolerations:
       - effect: NoSchedule
