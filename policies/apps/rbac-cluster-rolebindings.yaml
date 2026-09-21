@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rbac-cluster-rolebindings
+  namespace: openshift-gitops  
+  annotations:
+    argocd.argoproj.io/sync-wave: "17"    
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:jguillemat/test-argocd.git
+    targetRevision: main    
+    path: policies/rbac/cluster-rolebindings
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

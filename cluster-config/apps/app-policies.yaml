@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: policies
+  namespace: openshift-gitops
+  annotations:
+    # Wave 15 Configuración RBAC ( /policies ) 
+    # Configuración groups/roles/bindings.
+    argocd.argoproj.io/sync-wave: "15"  
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:jguillemat/test-argocd.git
+    targetRevision: main
+    path: policies/apps
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openshift-gitops
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

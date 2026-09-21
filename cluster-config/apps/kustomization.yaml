@@ -3,6 +3,7 @@ kind: Kustomization
 metadata:
   name: apps-cluster-config
 resources:
+  - app-policies.yaml
   - app-platform.yaml
   - app-operators.yaml
   - app-observability.yaml  
