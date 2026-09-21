@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: rbac-cluster-rolebindings
+  annotations:
+    argocd.argoproj.io/sync-wave: "17" 
+resources:
+  - clusterrolebinding-cluster-admins.yaml
+  - clusterrolebinding-cluster-readers.yaml

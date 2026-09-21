@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rbac-cluster-groups
+  name: rbac-cluster-roles
   namespace: openshift-gitops  
   annotations:
-    argocd.argoproj.io/sync-wave: "16"
+    argocd.argoproj.io/sync-wave: "15"    
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main    
-    path: policies/rbac/cluster-groups
+    path: policies/rbac/cluster-roles
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:

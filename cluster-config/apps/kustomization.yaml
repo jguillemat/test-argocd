@@ -6,6 +6,6 @@ resources:
   - app-policies.yaml
   - app-platform.yaml
   - app-operators.yaml
-  - app-observability.yaml  
   - app-cluster-custom-resources.yaml
+  - app-observability.yaml  
 
