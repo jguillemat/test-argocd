@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: platform
   namespace: openshift-gitops
+  annotations:
     # Wave 50 Configuración Cluster ( /platform ) 
     # Configuración propia del cluster OpenShift. 
     argocd.argoproj.io/sync-wave: "50" 
