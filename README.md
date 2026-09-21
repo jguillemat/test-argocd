@@ -54,21 +54,26 @@ Modelo de Sync-Waves recomendado
 			AppProjects
 			Secrets GitOps
 			PullSecrets
+			
 	Wave 10     Policies/RBAC
 			ClusterRoles
 			ClusterRoleBindings
 			Groups
 			ServiceAccounts	
+			
 	Wave 20     Operadores Base
 			OperatorGroup
 			Subscription
 			Namespace
+			
 	Wave 25	    Storage
 			StorageClasses
+			
 	Wave 30     Operadores Infraestructura
 			OperatorGroup
 			Subscription
 			Namespace	
+			
 	Wave 40	    Security
 	Wave 50     Configuración de la plataforma
 	Wave 60     Configuración CRD's

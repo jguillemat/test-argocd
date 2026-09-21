@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: storage
   namespace: openshift-gitops
+  annotations:  
     # Wave 25 Configuración Storage ( /storage ) 
     argocd.argoproj.io/sync-wave: "25" 
     argocd.argoproj.io/enable-health-check: "true"

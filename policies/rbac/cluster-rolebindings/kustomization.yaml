@@ -3,6 +3,8 @@ kind: Kustomization
 metadata:
   name: rbac-cluster-rolebindings
   annotations:
+    # Wave 10 Configuración RBAC ( /policies ) 
+    # Configuración groups/roles/bindings.
     argocd.argoproj.io/sync-wave: "17" 
 resources:
   - clusterrolebinding-cluster-admins.yaml
