@@ -1,0 +1,21 @@
+apiVersion: tuned.openshift.io/v1
+kind: Tuned
+metadata:
+  name: worker-ioscheduler
+  namespace: openshift-cluster-node-tuning-operator
+spec:
+  profile:
+  - name: openshift-worker-ioscheduler
+    data: |
+      [main]
+      summary=A custom OpenShift for Disk Scheduler profile
+      include=openshift-control-plane
+      [disk]
+      devices=sda
+      elevator=none
+  recommend:
+  - profile: openshift-worker-ioscheduler
+    match:
+    - label: node-role.kubernetes.io/worker
+    priority: 10
+

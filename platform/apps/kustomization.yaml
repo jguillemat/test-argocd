@@ -3,10 +3,12 @@ kind: Kustomization
 metadata:
   name: apps-platform
 resources:
+  - proxy.yaml
   - dns-operator.yaml
   - image-registry.yaml
   - ingress-default.yaml
   - kubeletconfig.yaml
   - machineconfigpool.yaml
   - machineconfig.yaml
+  - tuned.yaml
 
