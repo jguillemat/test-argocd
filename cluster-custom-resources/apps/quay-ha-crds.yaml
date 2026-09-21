@@ -12,7 +12,7 @@ spec:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main    
     path: cluster-custom-resources/quay-ha
-    kustomize: {}    
+    kustomize: {}
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
