@@ -58,6 +58,7 @@ Bootstrap Application
 ```text
 .
 ├── bootstrap
+│   ├── app-cluster-root.yaml
 │   └── argocd
 │       └── applications
 │
