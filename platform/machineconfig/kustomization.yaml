@@ -3,9 +3,9 @@ kind: Kustomization
 metadata:
   name: machineconfig
   annotations:
-    # Wave 60 Configuración Cluster ( /platform ) 
+    # Wave 50 Configuración Cluster ( /platform ) 
     # Configuración propia del cluster OpenShift. 
-    argocd.argoproj.io/sync-wave: "60" 
+    argocd.argoproj.io/sync-wave: "50" 
 resources:
   - mc-99-worker-ssh.yaml
   - mc-99-master-ssh.yaml

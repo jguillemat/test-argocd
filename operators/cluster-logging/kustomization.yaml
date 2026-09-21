@@ -10,5 +10,5 @@ resources:
   - namespace-openshift-operators-redhat.yaml
   - namespace-openshift-logging.yaml
   - operatorgroup-cluster-logging.yaml
-  - subscription-cluster-logging.yaml
+  - subs-cluster-logging.yaml
 

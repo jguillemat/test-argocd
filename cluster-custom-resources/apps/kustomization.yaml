@@ -1,10 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
-  name: apps-cluster-custom-resources
+  name: app-cluster-custom-resources
   annotations:
-    # Wave 50 Configuración de Operadores ( /cluster-custom-resources ) 
-    argocd.argoproj.io/sync-wave: "50"    
+    # Wave 60 Configuración de Operadores ( /cluster-custom-resources ) 
+    argocd.argoproj.io/sync-wave: "60"    
 resources:
   - lvms-operator-crds.yaml
   - quay-ha-crds.yaml

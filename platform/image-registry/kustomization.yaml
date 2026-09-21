@@ -3,9 +3,9 @@ kind: Kustomization
 metadata:
   name: image-registry
   annotations:
-    # Wave 60 Configuración Cluster ( /platform ) 
+    # Wave 50 Configuración Cluster ( /platform ) 
     # Configuración propia del cluster OpenShift. 
-    argocd.argoproj.io/sync-wave: "60"   
+    argocd.argoproj.io/sync-wave: "50"   
 resources:
   - pvc-image-registry-storage.yaml
   - imageregistry-cluster.yaml

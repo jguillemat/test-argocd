@@ -1,18 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: policies
+  name: observability
   namespace: openshift-gitops
   annotations:
-    # Wave 15 Configuración RBAC ( /policies ) 
-    # Configuración groups/roles/bindings.
-    argocd.argoproj.io/sync-wave: "15"  
+    # Wave 70 Observabilidad  ( /observability ) 
+    # Servicios de monitorización de la plataforma/aplicaciones 
+    argocd.argoproj.io/sync-wave: "70"    
+    argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main
-    path: policies/apps
+    path: observability/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops

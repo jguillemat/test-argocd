@@ -4,7 +4,8 @@ metadata:
   name: cluster-logging-operator
   namespace: openshift-gitops  
   annotations:
-    argocd.argoproj.io/sync-wave: "30"    
+    argocd.argoproj.io/sync-wave: "30"
+    argocd.argoproj.io/enable-health-check: "true"  
 spec:
   project: default
   source:

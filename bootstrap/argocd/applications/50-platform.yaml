@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: observability
+  name: platform
   namespace: openshift-gitops
-  annotations:
-    # Wave 70 Observabilidad  ( /observability ) 
-    # Servicios de monitorización de la plataforma/aplicaciones 
-    argocd.argoproj.io/sync-wave: "70"    
+    # Wave 50 Configuración Cluster ( /platform ) 
+    # Configuración propia del cluster OpenShift. 
+    argocd.argoproj.io/sync-wave: "50" 
+    argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main
-    path: observability/apps
+    path: platform/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops

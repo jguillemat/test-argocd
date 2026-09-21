@@ -9,5 +9,5 @@ metadata:
 resources:
   - namespace-openshift-storagte.yaml
   - operatorgroup-openshift-storage.yaml
-  - subscription-lvms-operator.yaml
+  - subs-lvms-operator.yaml
 

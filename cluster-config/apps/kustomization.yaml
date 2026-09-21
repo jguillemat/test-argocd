@@ -1,11 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
-  name: apps-cluster-config
+  name: app-cluster-config
+  annotations:
+    # Wave 0 Configuración cluster ( /cluster-config ) 
+    # Namespaces, AppProjects, Secrets GitOps, PullSecrets
+    argocd.argoproj.io/sync-wave: "0"      
 resources:
-  - app-policies.yaml
-  - app-platform.yaml
-  - app-operators.yaml
-  - app-cluster-custom-resources.yaml
-  - app-observability.yaml  
 

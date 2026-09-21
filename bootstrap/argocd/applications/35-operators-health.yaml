@@ -1,17 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-custom-resources
+  name: operators-health
   namespace: openshift-gitops
   annotations:
-    # Wave 50 Configuración de Operadores ( /cluster-custom-resources ) 
-    argocd.argoproj.io/sync-wave: "50"    
+    # Wave 35 Operadores Healthchecks ( /operators-health ) 
+    argocd.argoproj.io/sync-wave: "35"    
+    argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
     targetRevision: main
-    path: cluster-custom-resources/apps
+    path: operators-health/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-gitops

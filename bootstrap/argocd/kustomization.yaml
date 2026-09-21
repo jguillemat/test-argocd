@@ -5,7 +5,7 @@ metadata:
 resources:
   - namespace-openshift-gitops-operator.yaml
   - operatorgroup-openshift-gitops-operator.yaml
-  - subscription-openshift-gitops-operator.yaml
+  - subs-openshift-gitops-operator.yaml
   - namespace-openshift-gitops.yaml
   - serviceaccount-argocd-admin-sa.yaml
   - clusterrolebinding-argocd-admin.yaml

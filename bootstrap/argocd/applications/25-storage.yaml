@@ -1,19 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rbac-cluster-roles
-  namespace: openshift-gitops  
-  annotations:
-    argocd.argoproj.io/sync-wave: "10"
-    argocd.argoproj.io/enable-health-check: "true"    
+  name: storage
+  namespace: openshift-gitops
+    # Wave 25 Configuración Storage ( /storage ) 
+    argocd.argoproj.io/sync-wave: "25" 
+    argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: default
   source:
     repoURL: git@github.com:jguillemat/test-argocd.git
-    targetRevision: main    
-    path: policies/rbac/cluster-roles
+    targetRevision: main
+    path: storage/apps
   destination:
     server: https://kubernetes.default.svc
+    namespace: openshift-gitops
   syncPolicy:
     automated:
       prune: true
