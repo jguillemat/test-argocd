@@ -7,4 +7,5 @@ metadata:
     # Servicios de monitorización de la plataforma/aplicaciones 
     argocd.argoproj.io/sync-wave: "70"  
 resources:
-
+  - cluster-monitoring-configmap-no-storage.yaml
+  - user-workload-monitoring-config-no-storage.yaml

@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform-ingress-default
+  namespace: openshift-gitops  
+  annotations:
+    # Wave 60 Configuración Cluster ( /platform ) 
+    argocd.argoproj.io/sync-wave: "60"    
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:jguillemat/test-argocd.git
+    targetRevision: main    
+    path: platform/ingress/default
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

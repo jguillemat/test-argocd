@@ -5,5 +5,8 @@ metadata:
 resources:
   - dns-operator.yaml
   - image-registry.yaml
+  - ingress-default.yaml
+  - kubeletconfig.yaml
+  - machineconfigpool.yaml
   - machineconfig.yaml
 
