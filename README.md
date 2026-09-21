@@ -364,7 +364,7 @@ observability
 Directorios:
 
 ```text
-kebab-case
+lower-case
 ```
 
 Recursos:

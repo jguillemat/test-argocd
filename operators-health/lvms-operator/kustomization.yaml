@@ -3,8 +3,8 @@ kind: Kustomization
 metadata:
   name: lvms-operator-health
   annotations:
-    # Wave 35 Operadores Healthchecks ( /operators-health ) 
-    argocd.argoproj.io/sync-wave: "35"  
+    # Wave 40 Operadores Healthchecks ( /operators-health ) 
+    argocd.argoproj.io/sync-wave: "40"  
 resources:
   - deployment-lvms-operator.yaml
 
