@@ -11,22 +11,16 @@ data:
         requests:
           cpu: 200m 
           memory: 2Gi      
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
       tolerations:
       - effect: NoSchedule
         key: node-role.kubernetes.io/infra
         operator: Exists
     prometheusOperator:
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
       tolerations:
       - effect: NoSchedule
         key: node-role.kubernetes.io/infra
         operator: Exists
     thanosRuler:
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
       tolerations:
       - effect: NoSchedule
         key: node-role.kubernetes.io/infra
